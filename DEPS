@@ -57,7 +57,7 @@ gclient_gn_args = [
 vars = {
   'nw_src_revision': 'e9977c09e3401bf834a7a7a70e9292fefddb0c30',
   'nw_v8_revision': '0cf1599d55b097506e30834877b59d2838f955de',
-  'nw_node_revision': '622cf5386c3eb7ce0dd871aa2172eb883fa83006',
+  'nw_node_revision': '773dd61ae2f6bad8ed1c88dfda4dd5127858ce88',
   # Variable that can be used to support multiple build scenarios, like having
   # Chromium specific targets in a client project's GN file or sync dependencies
   # conditionally etc.
@@ -309,6 +309,7 @@ vars = {
   'chromium_git': 'https://chromium.googlesource.com',
   'dawn_git': 'https://dawn.googlesource.com',
   'nwjs_git': 'https://github.com/nwjs',
+  'linus_git': 'https://github.com/linusha',
   'pdfium_git': 'https://pdfium.googlesource.com',
   'quiche_git': 'https://quiche.googlesource.com',
   'skia_git': 'https://skia.googlesource.com',
@@ -2061,7 +2062,7 @@ deps = {
     Var('nwjs_git') + '/v8.git' + '@' +  Var('nw_v8_revision'),
 
   'src/third_party/node-nw':
-    Var('nwjs_git') + '/node.git' + '@' +  Var('nw_node_revision'),
+    Var('linus_git') + '/node.git' + '@' +  Var('nw_node_revision'),
 
   #'src/v8':
   #  Var('chromium_git') + '/v8/v8.git' + '@' +  Var('v8_revision'),
